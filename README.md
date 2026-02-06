@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#" target="_blank">
-    <img src="images/logo.png" width="400" alt="Skin Cancer AI Logo">
+    <img src="assets/logo.png" width="400" alt="Skin Cancer AI Logo">
   </a>
 </p>
 
@@ -16,7 +16,7 @@
 
 *An advanced AI-driven diagnostic tool for skin lesion analysis and automated medical reporting*
 
-[Key Features](#key-features) • [Repository Structure](#repository-structure) • [Installation](#installation) • [Quick Start](#quick-start) • [Disclaimer](#-disclaimer)
+[Key Features](#key-features) • [Repository Structure](#repository-structure) • [Installation](#installation) • [Quick Start](#quick-start) • [Disclaimer](#disclaimer)
 
 </div>
 
@@ -167,7 +167,7 @@ L'interface affiche une probabilité de confiance, une classification claire, et
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 > **IMPORTANT**: This tool is developed for **educational and research purposes only**. The AI-generated analysis is **NOT** a substitute for professional medical diagnosis, prognosis, or treatment. 
 > 
