@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact | MedAI Analysis</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+	<nav class="navbar">
+		<a href="index.html" class="nav-brand">
+			<img src="assets/logo.png" alt="SkinCare AI" width="27%" height="27%">
+		</a>
+		<div class="nav-links">
+			<a href="index.html">Analyzer</a>
+			<a href="about.html">About Model</a>
+			<a href="contact.html" class="active">Contact Support</a>
+		</div>
+	</nav>
+
+	<div class="main-content">
+
+		<div class="hero-section">
+			<h1>Support & Contact</h1>
+			<p style="color: var(--secondary);">Have a question or issue? Send us a message and we’ll help.</p>
+		</div>
+
+		<div class="card" style="text-align: left; max-width: 800px;">
+			<h2 style="color: var(--primary); margin-bottom: 1rem;">
+				<i class="fa-solid fa-headset"></i> Contact Support
+			</h2>
+
+			<form id="supportForm" novalidate>
+				<div class="form-group">
+					<label for="fullName">Full Name</label>
+					<input type="text" id="fullName" placeholder="Your full name" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email Address</label>
+					<input type="email" id="email" placeholder="you@example.com" required>
+				</div>
+
+				<div class="form-group">
+					<label for="topic">Topic</label>
+					<select id="topic" required>
+						<option value="">Select a topic</option>
+						<option>Technical Issue</option>
+						<option>Model Feedback</option>
+						<option>Billing & Licensing</option>
+						<option>General Question</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="message">Message</label>
+					<textarea id="message" rows="6" placeholder="Describe your issue or question..." required></textarea>
+				</div>
+
+				<button type="submit" class="btn" style="background-color: #2563eb;">
+					<i class="fa-solid fa-paper-plane"></i> Send to Support
+				</button>
+			</form>
+
+			<p style="font-size: 0.85rem; color: var(--secondary); margin-top: 0.75rem;">
+				Typical response time: 24–48 hours (business days).
+			</p>
+
+			<div id="supportResult"></div>
+		</div>
+
+	</div>
+
+	<footer>
+		<p>&copy; 2026 MedAI Solutions. For Research Purposes Only. Not a final diagnosis.</p>
+	</footer>
+
+	<script>
+		const form = document.getElementById('supportForm');
+		const resultBox = document.getElementById('supportResult');
+
+		function isValidEmail(email) {
+			return /[^\s@]+@[^\s@]+\.[^\s@]+/.test(email);
+		}
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const name = document.getElementById('fullName').value.trim();
+			const email = document.getElementById('email').value.trim();
+			const topic = document.getElementById('topic').value.trim();
+			const message = document.getElementById('message').value.trim();
+
+			// Basic validation
+			if (!name || !email || !topic || !message) {
+				resultBox.innerHTML = '<div class="card" style="background:#0f172a; color:#f87171; margin-top:1rem;">Please fill in all fields.</div>';
+				return;
+			}
+			if (!isValidEmail(email)) {
+				resultBox.innerHTML = '<div class="card" style="background:#0f172a; color:#f87171; margin-top:1rem;">Enter a valid email address.</div>';
+				return;
+			}
+
+			const subject = `[MedAI Support] ${topic} — ${name}`;
+			const bodyLines = [
+				`Name: ${name}`,
+				`Email: ${email}`,
+				`Topic: ${topic}`,
+				'',
+				'Message:',
+				message,
+				'',
+				`Device: ${navigator.userAgent}`
+			];
+			const body = encodeURIComponent(bodyLines.join('\n'));
+			const mailto = `mailto:support@medai.solutions?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+			// Open email client
+			window.location.href = mailto;
+
+			// Show helpful fallback message
+			resultBox.innerHTML = '<div class="card" style="background:#0f172a; color:#cbd5e1; margin-top:1rem;">Your email client should open. If it doesn\'t, send your message to <strong>support@medai.solutions</strong>.</div>';
+		});
+	</script>
+</body>
+
+</html>
