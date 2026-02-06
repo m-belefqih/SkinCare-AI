@@ -1,0 +1,23 @@
+# 🌐 Web Server & API
+fastapi                  # Web framework for building the API
+uvicorn                  # ASGI server to run FastAPI
+python-multipart         # Required for handling file/image uploads
+
+# 🧠 AI & Machine Learning
+tensorflow>=2.15.0       # Deep Learning framework for VGG16 model
+huggingface-hub          # To download the model from HuggingFace
+google-genai             # Google Gemini SDK for clinical report generation
+
+# 📊 Data Processing & Imaging
+numpy                    # Numerical operations and array handling
+Pillow                   # Image processing (resizing, loading)
+
+# 📄 Report Generation (PDF/Word)
+fpdf2                    # PDF document creation with RTL support
+python-docx              # Microsoft Word document generation
+markdown                 # Converts AI text to formatted report structure
+beautifulsoup4           # HTML parsing for clean text extraction
+
+# 🌍 Multilingual Support
+arabic-reshaper          # Corrects Arabic character connections
+python-bidi              # Handles bidirectional text (RTL) for Arabic
