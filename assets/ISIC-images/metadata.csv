@@ -1,0 +1,7 @@
+isic_id,attribution,copyright_license,age_approx,anatom_site_general,concomitant_biopsy,diagnosis_1,diagnosis_2,diagnosis_3,diagnosis_4,diagnosis_5,diagnosis_confirm_type,image_type,melanocytic,sex
+ISIC_0000001,Anonymous,CC-0,30,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",,dermoscopic,True,female
+ISIC_0000002,Anonymous,CC-0,60,upper extremity,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,,histopathology,dermoscopic,True,female
+ISIC_0000007,Anonymous,CC-0,25,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",,dermoscopic,True,female
+ISIC_0000010,Anonymous,CC-0,35,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",,dermoscopic,True,female
+ISIC_0000012,Anonymous,CC-0,30,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,,dermoscopic,True,male
+ISIC_0000025,Anonymous,CC-0,35,lower extremity,False,Benign,Benign melanocytic proliferations,Nevus,,,,dermoscopic,True,female
