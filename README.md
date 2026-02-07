@@ -71,18 +71,22 @@ Designed for educational and research purposes, this project demonstrates a comp
 
 ## Repository Structure
 
-```
-├── index.html                # Frontend UI 
-├── main.py                   # FastAPI backend (root)
-
-```
-
-```
-index.html                # Frontend UI
-main.py                   # Backend API (root)
-skin-cancer-api/main.py   # FastAPI backend logic
-requirements.txt          # Python dependencies
-README.md                 # Project documentation
+```text
+📦 SkinCare-AI
+├── 📂 api/                        # Backend Application (FastAPI)
+│   ├── fonts/                  # Custom fonts (Amiri) for multilingual PDF generation
+│   └── main.py                 # API server logic & AI model integration
+├── 📂 images/                     # Documentation assets
+│   ├── demo.gif                # Video GIF demonstration of the app
+│   ├── logo.png                # Project branding
+│   └── result.png              # Sample analysis output
+├── about.html                  # "About Us" page 
+├── contact.html                # Contact and support page
+├── index.html                  # Main Dashboard (Frontend)
+├── requirements.txt            # Project dependencies & versions
+├── script.js                   # Frontend logic (API calls & UI interactions)
+├── style.css                   # Custom UI styling & layout
+└── .gitignore                  # Rules for files to be excluded from Git
 ```
 
 ---
@@ -152,11 +156,7 @@ uvicorn main:app --reload
 
 ## Result
 
-<p align="center">
-  <img src="images/result.png" alt="Sample Output" width="700" style="border-radius: 10px; shadow: 5px 5px 15px rgba(0,0,0,0.1);">
-</p>
-
-L'interface affiche une probabilité de confiance, une classification claire, et un aperçu du rapport généré par l'IA Gemini avant le téléchargement.
+<img src="assets/demo.gif" alt="Sample Output" style="border-radius: 10px; shadow: 5px 5px 15px rgba(0,0,0,0.1);">
 
 ### Usage
 
